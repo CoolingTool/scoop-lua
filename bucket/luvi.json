@@ -1,0 +1,31 @@
+{
+    "version": "2.14.0",
+    "description": "A project in-between luv and luvit.",
+    "homepage": "https://github.com/luvit/luvi",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-amd64.exe",
+            "hash": "0d93b60169c9f7f8b84fd437942bc49c41e702e20d005f6386cb03eb57e08b93",
+            "bin": [["luvi-regular-Windows-amd64.exe", "luvi"]]
+        },
+        "32bit": {
+            "url": "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-ia32.exe",
+            "hash": "0b2156276ae63a127d919f0be4ac246c877995af6ec891b5b584bc17f546bb8f",
+            "bin": [["luvi-regular-Windows-ia32.exe", "luvi"]]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-amd64.exe",
+                "bin": [["luvi-regular-Windows-amd64.exe", "luvi"]]
+            },
+            "32bit": {
+                "url": "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-ia32.exe",
+                "bin": [["luvi-regular-Windows-ia32.exe", "luvi"]]
+            }
+        }
+    }
+}
