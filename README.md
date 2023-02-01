@@ -8,7 +8,7 @@ Template bucket for [Scoop](https://scoop.sh), the Windows command-line installe
 How do I install these manifests?
 ---------------------------------
 
-To add this bucket, run `scoop bucket add lua https://github.com/CoolingTool/scoop-lua`. To install, do `scoop install <manifest>`.
+To add this bucket, run `scoop bucket add lua https://github.com/CoolingTool/scoop-lua`. To install, do `scoop install luvi`.
 
 How do I contribute new manifests?
 ----------------------------------
