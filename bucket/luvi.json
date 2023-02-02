@@ -3,6 +3,7 @@
     "description": "A project in-between luv and luvit.",
     "homepage": "https://github.com/luvit/luvi",
     "license": "Apache-2.0",
+    "notes": "this program is added to your path, you may need to close and reopen your terminal to use it",
     "architecture": {
         "64bit": {
             "url": [
