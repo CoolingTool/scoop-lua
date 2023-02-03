@@ -3,44 +3,25 @@
     "description": "A project in-between luv and luvit.",
     "homepage": "https://github.com/luvit/luvi",
     "license": "Apache-2.0",
-    "notes": "this program is added to your path, you may need to close and reopen your terminal to use it",
     "architecture": {
         "64bit": {
-            "url": [
-                "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-amd64.exe#/luvi.exe",
-                "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-amd64.lib#/luvi.lib"
-            ],
-            "hash": [
-                "0d93b60169c9f7f8b84fd437942bc49c41e702e20d005f6386cb03eb57e08b93",
-                "a4afe0687aebdc049461f39ac2757ed56ec16c0ad5de56d0165c472aa9c3d153"
-            ]
+            "url": "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-amd64.exe#/luvi.exe",
+            "hash": "0d93b60169c9f7f8b84fd437942bc49c41e702e20d005f6386cb03eb57e08b93"
         },
         "32bit": {
-            "url": [
-                "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-ia32.exe#/luvi.exe",
-                "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-ia32.lib#/luvi.lib"
-            ],
-            "hash": [
-                "0b2156276ae63a127d919f0be4ac246c877995af6ec891b5b584bc17f546bb8f",
-                "f379e80e194aca56e7f8fa4b3f3cf5f1ecea561e5146ec296f81e7fffb9c3e17"
-            ]
+            "url": "https://github.com/luvit/luvi/releases/download/v2.14.0/luvi-regular-Windows-ia32.exe#/luvi.exe",
+            "hash": "0b2156276ae63a127d919f0be4ac246c877995af6ec891b5b584bc17f546bb8f"
         }
     },
-    "env_add_path": ".",
+    "bin": "luvi.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": [
-                    "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-amd64.exe#/luvi.exe",
-                    "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-amd64.lib#/luvi.lib"
-                ]
+                "url": "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-amd64.exe#/luvi.exe"
             },
             "32bit": {
-                "url": [
-                    "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-ia32.exe#/luvi.exe",
-                    "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-ia32.lib#/luvi.lib"
-                ]
+                "url": "https://github.com/luvit/luvi/releases/download/v$version/luvi-regular-Windows-ia32.exe#/luvi.exe"
             }
         }
     }
