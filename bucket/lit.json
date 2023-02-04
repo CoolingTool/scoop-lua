@@ -12,8 +12,8 @@
     "post_install": "Remove-Item \"$dir\\lit.zip\"",
     "bin": "lit.exe",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/luvit/lit/master/get-lit.ps1",
-        "regex": "\\$LIT_VERSION\\s*=\\s*\"(?<version>.*)\""
+        "url": "https://lit.luvit.io/search/* author:luvit name:lit",
+        "jsonpath": "$.matches['luvit/lit'].version"
     },
     "autoupdate": {
         "url": "https://lit.luvit.io/packages/luvit/lit/v$version.zip#/lit.zip.download"
