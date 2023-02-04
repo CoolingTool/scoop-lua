@@ -1,0 +1,21 @@
+{
+    "version": "3.8.5",
+    "description": "Toolkit for developing, sharing, and running luvit/lua programs and libraries.",
+    "homepage": "https://github.com/luvit/lit",
+    "license": "Apache-2.0",
+    "depends": "luvi",
+    "url": "https://lit.luvit.io/packages/luvit/lit/v3.8.5.zip#/lit.zip.download",
+    "pre_install": [
+        "Move-Item \"$dir\\lit.zip.download\" \"$dir\\lit.zip\"",
+        "luvi \"$dir\\lit.zip\" -- make \"$dir\\lit.zip\" \"$dir\\lit.exe\" (Get-CommandPath luvi)"
+    ],
+    "post_install": "Remove-Item \"$dir\\lit.zip\"",
+    "bin": "lit.exe",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/luvit/lit/master/get-lit.ps1",
+        "regex": "\\$LIT_VERSION\\s*=\\s*\"(?<version>.*)\""
+    },
+    "autoupdate": {
+        "url": "https://lit.luvit.io/packages/luvit/lit/v$version.zip#/lit.zip.download"
+    }
+}
