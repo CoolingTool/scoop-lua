@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.8.5",
     "description": "Toolkit for developing, sharing, and running luvit/lua programs and libraries.",
     "homepage": "https://github.com/luvit/lit",
@@ -12,7 +13,7 @@
     "post_install": "Remove-Item \"$dir\\lit.zip\"",
     "bin": "lit.exe",
     "checkver": {
-        "url": "https://lit.luvit.io/search/* author:luvit name:lit",
+        "url": "https://lit.luvit.io/search/author:luvit%20name:lit",
         "jsonpath": "$.matches['luvit/lit'].version"
     },
     "autoupdate": {

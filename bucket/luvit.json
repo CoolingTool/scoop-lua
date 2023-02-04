@@ -15,7 +15,7 @@
     "post_install": "Remove-Item \"$dir\\luvit.zip\"",
     "bin": "luvit.exe",
     "checkver": {
-        "url": "https://lit.luvit.io/search/* author:luvit name:luvit",
+        "url": "https://lit.luvit.io/search/author:luvit%20name:luvit",
         "jsonpath": "$.matches['luvit/luvit'].version"
     },
     "autoupdate": {
