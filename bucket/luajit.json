@@ -16,7 +16,7 @@
         }
     },
     "bin": [
-        ["bin/luajit.exe"],
+        ["bin/luajit.exe", "luajit"],
         ["bin/luajit.exe", "lua"],
         ["bin/luajit.exe", "lua51"]
     ],
