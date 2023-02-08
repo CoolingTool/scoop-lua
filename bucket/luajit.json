@@ -1,7 +1,7 @@
 {
     "version": "2.1.0_beta3-4",
-    "description": "Just-in-time compiler and drop-in replacement for Lua 5.1 (MSYS2 MinGW version)",
-    "homepage": "https://luajit.org/",
+    "description": "Just-In-Time Compiler (JIT) for the Lua programming language.",
+    "homepage": "https://luajit.org/luajit.html",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -15,10 +15,27 @@
             "extract_dir": "mingw32"
         }
     },
+    "extract_to": "data",
+    "pre_install": [
+        "Move-Item \"$dir\\data\\bin\\luajit.exe\" \"$dir\"",
+        "Move-Item \"$dir\\data\\bin\\lua51.dll\" \"$dir\"",
+        "New-Item \"$dir\\lua\" -ItemType Directory -Force | Out-Null",
+        "Move-Item \"$dir\\data\\share\\luajit*\\*\" \"$dir\\lua\""
+    ],
+    "post_install": "Remove-Item \"$dir\\data\" -Recurse -Force",
     "bin": [
-        ["bin/luajit.exe", "luajit"],
-        ["bin/luajit.exe", "lua"],
-        ["bin/luajit.exe", "lua51"]
+        [
+            "luajit.exe",
+            "lua"
+        ],
+        [
+            "luajit.exe",
+            "lua51"
+        ],
+        [
+            "luajit.exe",
+            "luajit"
+        ]
     ],
     "checkver": {
         "url": "https://packages.msys2.org/api/search?query=mingw-w64-x86_64-luajit&qtype=binpkg",
@@ -27,12 +44,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-luajit-$version-any.pkg.tar.zst",
-                "extract_dir": "mingw64"
+                "url": "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-luajit-$version-any.pkg.tar.zst"
             },
             "32bit": {
-                "url": "https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-luajit-$version-any.pkg.tar.zst",
-                "extract_dir": "mingw32"
+                "url": "https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-luajit-$version-any.pkg.tar.zst"
             }
         }
     }
